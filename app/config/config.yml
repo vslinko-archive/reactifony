@@ -48,3 +48,8 @@ swiftmailer:
     password: "%mailer_password%"
     spool:
         type: memory
+
+reactifony_block:
+    building:
+        bundles:
+            - @ReactifonyTestBundle

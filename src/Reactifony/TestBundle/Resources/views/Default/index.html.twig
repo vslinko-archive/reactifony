@@ -1,0 +1,39 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+    {{ reactifony({
+        block: 'Accordion',
+        props: {
+            defaultOpened: 0,
+            titles: [
+                'Документы',
+                'Текст'
+            ]
+        },
+        children: [
+            {
+                block: 'Documents',
+                props: {
+                    documents: [
+                        {
+                            title: 'Example document #1',
+                            url: '/test.pdf'
+                        },
+                        {
+                            title: 'Example document #2',
+                            url: '/test.pdf'
+                        }
+                    ]
+                },
+                children: []
+            },
+            {
+                block: 'Text',
+                props: {
+                    content: '<b>Hello World!</b>'
+                },
+                children: []
+            }
+        ]
+    }) }}
+{% endblock %}

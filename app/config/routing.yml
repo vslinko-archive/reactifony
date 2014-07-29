@@ -1,0 +1,4 @@
+reactifony_test:
+    resource: "@ReactifonyTestBundle/Controller/"
+    type: annotation
+    prefix: /

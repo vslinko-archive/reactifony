@@ -1,0 +1,20 @@
+services:
+    reactifony.block.service.manager:
+        class: Reactifony\BlockBundle\Block\Service\Manager
+
+    reactifony.block.snapshot.factory:
+        class: Reactifony\BlockBundle\Block\Snapshot\Factory
+        arguments:
+            - @reactifony.block.service.manager
+
+    reactifony.block.snapshot.renderer:
+        class: Reactifony\BlockBundle\Block\Snapshot\Renderer
+        arguments:
+            - @templating
+
+    reactifony.block.twig.reactifony_extension:
+        class: Reactifony\BlockBundle\Twig\ReactifonyExtension
+        arguments:
+            - @service_container
+        tags:
+            - { name: twig.extension }
