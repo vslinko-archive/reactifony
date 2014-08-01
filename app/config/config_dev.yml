@@ -8,10 +8,6 @@ framework:
     profiler:
         only_exceptions: false
 
-web_profiler:
-    toolbar: %debug_toolbar%
-    intercept_redirects: %debug_redirects%
-
 monolog:
     handlers:
         main:
@@ -22,5 +18,6 @@ monolog:
             type: console
             bubble: false
 
-assetic:
-    use_controller: %use_assetic_controller%
+web_profiler:
+    toolbar: %debug_toolbar%
+    intercept_redirects: %debug_redirects%

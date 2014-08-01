@@ -1,6 +1,6 @@
 <?php
 
-namespace Reactifony\TestBundle\Block\Service;
+namespace App\Block\Service;
 
 use Reactifony\BlockBundle\Block\Service\BaseBlockService;
 use Reactifony\BlockBundle\Block\Service\ClientSideBlockServiceInterface;
@@ -9,7 +9,7 @@ class AccordionBlockService extends BaseBlockService implements ClientSideBlockS
 {
     public function getClientSideModuleName()
     {
-        return '@ReactifonyTestBundle/Accordion';
+        return '@App/Accordion';
     }
 
     public function getName()

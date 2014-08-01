@@ -1,4 +1,3 @@
-reactifony_test:
-    resource: "@ReactifonyTestBundle/Controller/"
-    type: annotation
-    prefix: /
+app:
+    resource: "@App/Resources/config/routing.yml"
+    type: "rad_convention"

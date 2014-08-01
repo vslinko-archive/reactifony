@@ -23,10 +23,13 @@ twig:
     debug: "%kernel.debug%"
     strict_variables: "%kernel.debug%"
 
-assetic:
-    debug: "%kernel.debug%"
-    use_controller: false
-    bundles: []
+swiftmailer:
+    transport: "%mailer_transport%"
+    host: "%mailer_host%"
+    username: "%mailer_user%"
+    password: "%mailer_password%"
+    spool:
+        type: memory
 
 doctrine:
     dbal:
@@ -41,15 +44,6 @@ doctrine:
         auto_generate_proxy_classes: "%kernel.debug%"
         auto_mapping: true
 
-swiftmailer:
-    transport: "%mailer_transport%"
-    host: "%mailer_host%"
-    username: "%mailer_user%"
-    password: "%mailer_password%"
-    spool:
-        type: memory
-
 reactifony_block:
     building:
-        bundles:
-            - @ReactifonyTestBundle
+        bundles: ['@App']

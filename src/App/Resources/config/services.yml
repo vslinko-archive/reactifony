@@ -1,0 +1,15 @@
+services:
+    app.block.text_block_service:
+        class: App\Block\Service\TextBlockService
+        tags:
+            - { name: reactifony.block.service }
+
+    app.block.documents_block_service:
+        class: App\Block\Service\DocumentsBlockService
+        tags:
+            - { name: reactifony.block.service }
+
+    app.block.accordion_block_service:
+        class: App\Block\Service\AccordionBlockService
+        tags:
+            - { name: reactifony.block.service }
