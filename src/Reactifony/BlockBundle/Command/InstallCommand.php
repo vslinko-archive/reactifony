@@ -27,6 +27,7 @@ class InstallCommand extends ContainerAwareCommand
         $dependencies = array(
             'react' => '~0.11',
             'webpack' => '~1.3',
+            'webpack-dev-server' => '~1.4',
             'jsx-loader' => '~0.11',
         );
         $dependencies = array_merge(

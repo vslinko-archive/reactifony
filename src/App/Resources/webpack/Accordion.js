@@ -5,6 +5,12 @@
 var React = require('react');
 
 var Accordion = React.createClass({
+    getInitialState: function() {
+        return {
+            value: 'initia'
+        };
+    },
+
     renderChildren: function(children, index) {
         var title = this.props.titles[index];
 
@@ -16,9 +22,14 @@ var Accordion = React.createClass({
         );
     },
 
+    handleChange: function(event) {
+        this.setState({value: event.target.value});
+    },
+
     render: function() {
         return (
             <div>
+                <input onChange={this.handleChange} value={this.state.value} />
                 {React.Children.map(this.props.children, this.renderChildren)}
             </div>
         );

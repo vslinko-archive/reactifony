@@ -52,6 +52,7 @@ class BuildCommand extends ContainerAwareCommand
             'output' => array(
                 'path' => $outputDirectory,
                 'filename' => $outputName,
+                'publicPath' => '/',
             ),
         );
 
@@ -86,6 +87,8 @@ class BuildCommand extends ContainerAwareCommand
         $webpackConfigFile .= '};';
 
         file_put_contents($workingDirectory.'/webpack.config.js', $webpackConfigFile);
+
+        copy(__DIR__.'/../Resources/server.js', $workingDirectory.'/server.js');
 
         $command = array($workingDirectory.'/node_modules/.bin/webpack');
         if ($input->getOption('watch')) {
